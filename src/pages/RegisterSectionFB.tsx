@@ -42,6 +42,9 @@ const RegisterSection = () => {
     e.preventDefault();
     if (!validate()) return;
 
+    // Save form data to localStorage so ThankYou page can use it
+    localStorage.setItem("lastRegistration", JSON.stringify(formData));
+
     // Pre-save form data to backend (webhook will use this)
     fetch("https://sourabh-lp-1.onrender.com/api/pre-register", {
       method: "POST",

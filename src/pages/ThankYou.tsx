@@ -15,6 +15,7 @@ const ThankYou = () => {
       window.fbq("track", "PageView");
       window.fbq("trackSingle", "1278108320936716", "Purchase");
     }
+    localStorage.removeItem("lastRegistration");
   }, []);
 
   const day1 = config?.day1_datetime || "2026-02-21T20:00:00";

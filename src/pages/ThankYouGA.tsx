@@ -25,6 +25,7 @@ const ThankYouGA = () => {
 
   useEffect(() => {
     const t = setTimeout(() => setConfetti(false), 4000);
+    localStorage.removeItem("lastRegistration");
     return () => clearTimeout(t);
   }, []);
 
